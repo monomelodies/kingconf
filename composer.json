@@ -1,0 +1,31 @@
+{
+    "name": "monomelodies/kingconf",
+    "description": "Load configuration in any sane format",
+    "keywords": ["PHP","config","configuration","loader","json","ini","yaml","xml"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Marijn Ophorst",
+            "email": "marijn@monomelodies.nl"
+        }
+    ],
+    "require": {
+        "php": ">=5.4",
+        "symfony/yaml": "^3.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": ">=4"
+    },
+    "autoload": {
+        "psr-4": {
+            "Kingconf\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "": "example/src",
+            "Kingconf\\": "src/",
+            "Kingconf\\Test\\": "tests/"
+        }
+    }
+}
