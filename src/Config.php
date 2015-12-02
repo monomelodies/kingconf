@@ -5,11 +5,17 @@ namespace Kingconf;
 use ArrayObject;
 use Symfony\Component\Yaml\Yaml;
 
+/**
+ * The Config class. Construct with one or more config file paths, then access
+ * as an array (e.g. `$config['foo']`).
+ */
 class Config extends ArrayObject
 {
     /**
      * Constructor. Pass one or more paths to config files in supported formats
      * (ini, php, json, xml, yaml).
+     *
+     * @see Kingconf\Config::loadConfig
      */
     public function __construct($config)
     {
@@ -19,6 +25,16 @@ class Config extends ArrayObject
         }
     }
 
+    /**
+     * Private helper method to load a single config file.
+     *
+     * @param string $config Path to the config file to load.
+     * @throws Kingconf\NotfoundException if the file doesn't exist.
+     * @throws Kingconf\InvalidException if the formatting is invalid (e.g.
+     *  invalid JSON).
+     * @throws Kingconf\UnknownFormatException if the file format is not
+     *  supported. Note that this is a simple extension check.
+     */
     private function loadConfig($config)
     {
         if (!file_exists($config)) {
@@ -67,6 +83,5 @@ class Config extends ArrayObject
             $this[$key] = $value;
         }            
     }
-
 }
 
