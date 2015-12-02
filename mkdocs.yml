@@ -1,0 +1,10 @@
+site_name: Kingconf documentation
+site_url: http://kingconf.monomelodies.nl/
+repo_url: https://github.com/monomelodies/kingconf
+
+pages:
+- Home:
+    - 'Overview': 'index.md'
+
+copyright: Copyright &copy; 2015, <a href="http://monomelodies.nl/">Marijn Ophorst</a>
+
