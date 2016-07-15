@@ -1,6 +1,6 @@
 <?php
 
-namespace Kingconf;
+namespace Monomelodies\Kingconf;
 
 use ArrayObject;
 use Symfony\Component\Yaml\Yaml;

@@ -1,6 +1,6 @@
 <?php
 
-namespace Kingconf;
+namespace Monomelodies\Kingconf;
 
 class NotfoundException extends Exception
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Kingconf;
+namespace Monomelodies\Kingconf;
 
 class InvalidException extends Exception
 {
