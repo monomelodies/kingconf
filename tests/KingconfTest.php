@@ -1,9 +1,9 @@
 <?php
 
-namespace Kingconf\Tests;
+namespace Monomelodies\Kingconf\Tests;
 
 use PHPUnit_Framework_TestCase;
-use Kingconf\Config;
+use Monomelodies\Kingconf\Config;
 
 class KingconfTest extends PHPUnit_Framework_TestCase
 {
