@@ -23,16 +23,16 @@ $ composer require monomelodies/kingconf
 ### Manual
 - Download or clone the repository somewhere;
 - Add `/path/to/kingconf/src` to your autoloader for PSR-4 namespace
-  `Kingconf\\`.
+  `Monomelodies\\Kingconf\\`.
 
 ## Usage
-Create a `Kingconf\Config` object with one or more config file paths as the
-constructor arguments:
+Create a `Monomelodies\Kingconf\Config` object with one or more config file
+paths as the constructor arguments:
 
 ```php
 <?php
 
-use Kingconf\Config;
+use Monomelodies\Kingconf\Config;
 
 $config = new Config('/path/to/json', '/path/to/ini');
 ```
@@ -57,8 +57,8 @@ data) be sure to wrap the constructor in a try/catch block:
 ```php
 <?php
 
-use Kingconf\Config;
-use Kingconf\Exception;
+use Monomelodies\Kingconf\Config;
+use Monomelodies\Kingconf\Exception;
 
 try {
     $config = new Config($some_file_we_dont_trust);
@@ -70,6 +70,6 @@ try {
 Note that user submitted configuration is probably best handled in a different
 manner though...
 
-> All Kingconf exceptions extend `Kingconf\Exception`, which in turn extends
-> `DomainException`.
+> All Kingconf exceptions extend `Monomelodies\Kingconf\Exception`, which in
+> turn extends `DomainException`.
 
