@@ -18,14 +18,14 @@
     },
     "autoload": {
         "psr-4": {
-            "Kingconf\\": "src/"
+            "Monomelodies\\Kingconf\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
             "": "example/src",
-            "Kingconf\\": "src/",
-            "Kingconf\\Test\\": "tests/"
+            "Monomelodies\\Kingconf\\": "src/",
+            "Monomelodies\\Kingconf\\Test\\": "tests/"
         }
     }
 }
