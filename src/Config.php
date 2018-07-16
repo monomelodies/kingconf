@@ -17,9 +17,8 @@ class Config extends ArrayObject
      *
      * @see Kingconf\Config::loadConfig
      */
-    public function __construct($config)
+    public function __construct(string ...$configs)
     {
-        $configs = func_get_args();
         foreach ($configs as $config) {
             $this->loadConfig($config);
         }
@@ -29,13 +28,14 @@ class Config extends ArrayObject
      * Private helper method to load a single config file.
      *
      * @param string $config Path to the config file to load.
+     * @return void
      * @throws Kingconf\NotfoundException if the file doesn't exist.
      * @throws Kingconf\InvalidException if the formatting is invalid (e.g.
      *  invalid JSON).
      * @throws Kingconf\UnknownFormatException if the file format is not
      *  supported. Note that this is a simple extension check.
      */
-    private function loadConfig($config)
+    private function loadConfig(string $config) : void
     {
         if (!file_exists($config)) {
             throw new NotfoundException;
