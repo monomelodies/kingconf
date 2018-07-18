@@ -2,10 +2,10 @@
 
 namespace Monomelodies\Kingconf\Tests;
 
-use PHPUnit_Framework_TestCase;
+use PHPUnit\Framework\TestCase;
 use Monomelodies\Kingconf\Config;
 
-class KingconfTest extends PHPUnit_Framework_TestCase
+class KingconfTest extends TestCase
 {
     private function config($env)
     {
